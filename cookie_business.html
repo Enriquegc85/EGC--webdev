@@ -46,6 +46,23 @@
                 height: 300px;
                 margin: 10px;
             }
+            #extra-content {
+                display: none;
+                margin-top: 20px;
+                text-align: center;
+            }
+            button {
+                margin: 25px auto;
+                display: block;
+                padding: 15px 25px;
+                font-family: papyrus, fantasy;
+                font-weight: 900;
+                font-size: large;
+                background-color: rgb(126, 96, 77);
+                color: rgb(71, 45, 28);
+                border: solid 5px #2c2015;
+                border-radius: 10px;
+            }
         </style>
     </head>
     <body>
@@ -59,7 +76,10 @@
         <p>When I was 14 I decided to start my own business. "Cookies?" They asked. People around me although proud of me at first started to tell me that my idea was crazy. A child can't start a business. I wanted to prove them wrong and show them what I was capable of. So I did. First, I started baking cookies in my kitchen and selling them to friends and family. I created a menu of my best recipes and began to build a loyal customer base. Then I took the leap and started selling my cookies at local events and farmers' markets. It was a success!</p>
         <p>Now, I am proud to say that my business has grown and I have a team of bakers who help me create the best cookies in town. I am grateful for the support of my family and friends, and I am excited to see what the future holds for The Cookie Enterprise.</p>
         <h2>My Cookie Base Recipe</h2>
-        <img class="Cookie2" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Cookie_sheet_with_balls_of_chocolate_chip_cookie_dough_ready_for_baking%2C_March_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Another Mt Tim">
+        
+        <!-- Image that changes when you hover over it (uses onmouseover and onmouseout) -->
+        <img class="Cookie2" id="hoverImage" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Cookie_sheet_with_balls_of_chocolate_chip_cookie_dough_ready_for_baking%2C_March_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Cookie Dough" onmouseover="changeImg()" onmouseout="resetImg()">
+        
         <p>Image From: <a href="https://commons.wikimedia.org/wiki/File:Cookie_sheet_with_balls_of_chocolate_chip_cookie_dough_ready_for_baking,_March_2008.jpg" target="_blank">WIKIMEDIA</a></p>
         <p>My base recipe is a classic chocolate chip cookie recipe that I have perfected over the years. It is made with high-quality ingredients, including real butter, brown sugar, and semi-sweet chocolate chips. The dough is chilled before baking to ensure that the cookies are soft and chewy on the inside and crispy on the outside. I also offer variations of this recipe, such as adding nuts or using different types of chocolate chips.</p>
         <h3>Ingridients:</h3>
@@ -79,5 +99,34 @@
             <img CLASS="cook" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLZVwvGLkUL63K9e6csg4KADLlqHohQ4WTdNBxWT0ZSw&s=10">
             <img Class="cooki" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmrqklU5Y2krkTOWXbu50UltMncuMi-y0aeS1lAxbFw&s=10">
         </div>
+
+        <!-- Additional paragraph and image hidden by default -->
+        <div id="extra-content">
+            <p>Thank you for exploring The Cookie Enterprise! Here is a secret bonus sweet treat just for you.</p>
+            <img class="Cookie2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6t6Ypxk5zo2XJUOMzr6_pqN87FK87yFt_vHeR-6yaw&s=10" alt="Bonus Cookie">
+        </div>
+
+        <!-- Button at the bottom to show or hide the extra content -->
+        <button onclick="showHideExtra()">Click Me!</button>
+
+        <script>
+            function changeImg() {
+                document.getElementById("hoverImage").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS17ovm1ktX5ap0J5XwpXcHnSNPEkCx-LmczaqK23yWEg&s=10";
+            }
+            
+            function resetImg() {
+                document.getElementById("hoverImage").src = "https://upload.wikimedia.org/wikipedia/commons/9/98/Cookie_sheet_with_balls_of_chocolate_chip_cookie_dough_ready_for_baking%2C_March_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original";
+            }
+
+            function showHideExtra() {
+                let item = document.getElementById("extra-content");
+                if(item.style.display == "block") {
+                    item.style.display = "none";
+                } else {
+                    item.style.display = "block";
+                }
+            }
+        </script>
     </body>
 </html>
+
