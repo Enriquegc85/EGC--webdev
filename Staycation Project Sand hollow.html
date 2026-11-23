@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
 <head>
     <title>Sand Hollow St Goerge UT</title>
-    <meta charset ="UTF-8">
+    <meta charset="UTF-8">
     <style>
         body{
             color:rgb(71, 45, 28);
-            background-color: rgb(126, 96, 77);
+            background-color: rgb(255, 210, 183);
             font-family: papyrus, fantasy;
             font-weight: 900;
             font-size: xx-large;
             margin:0% auto;
             padding: 2.5%;
-            border: 15px solid #2c2015;
+            border: 15px solid #87d3ff;
         }
         h1{
             text-align: center;
@@ -23,18 +23,24 @@
             margin: 10px;
         }
         p{
-            padding: 15px;
-            margin: 15px;
+            padding: 5px;
+            margin: 5px;
         }
         .SandHollow1{
             width: 500px;
             height: 300px;
             text-align: center;
+            border: 5px solid #87d3ff;
+            border-radius: 15px;
         }
         .SandHollow2{
-            width: 400px;
-            height: 300px;
-            margin: 15px;
+            width: 85%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+            border: 5px solid #87d3ff;
+            border-radius: 15px;
+            padding: 5px;
         }
         #grid-wrapper{
             display: grid;
@@ -43,14 +49,27 @@
             margin: 15px;
         }
         .sandhollow, .sandh, .sandho{
-            width: 70%;
-            height: 70%;
-            margin: 100px auto;
+            width: 95%;
+            height: auto;
+            margin: 10px auto;
+            background-color: #df8547;
+            color: rgb(255, 210, 183);
+            border: 5px solid #87d3ff;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: x-large;
         }
         .SandHollow1{
             height: auto;
             width: 100%;
-            
+        }
+        button {
+            margin: 25px auto;
+            display: block;
+            padding: 15px 25px;
+            font-family: papyrus, fantasy;
+            font-weight: 900;
+            font-size: large;
         }
     </style>
 </head>
@@ -62,18 +81,22 @@
     <p>Sand Hollow State Park is a state park in Utah, United States, located in the southeastern part of the state, near the city of St. George. The park covers an area of over 20,000 acres and features a large reservoir, sandy beaches, and red rock formations. It is a popular destination for boating, fishing, camping, hiking, and off-road vehicle recreation. The park also offers picnic areas, restrooms, and a visitor center with information about the park's history and natural features.</p>
     <div id="grid-wrapper">
         <div class="sandhollow">
-            <img class="SandHollow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EP2Nwp7WvLgZwnpar7DwOG1ZatcXQohx7u6FHRsz9w&s=10" alt="Sand Hollow Reservoir">
+            <img class="SandHollow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCq4YDS7_uazc5K34H95QNnzj-V83pZPdeHSS1oD7Y6Q&s=10" alt="Sand Hollow Reservoir">
             <p>Sand Hollow Reservoir is a man-made lake located within Sand Hollow State Park in Utah. It was created by the construction of a dam on the Virgin River and serves as a popular destination for boating, fishing, and other water-based recreational activities. The reservoir is surrounded by red rock formations and sandy beaches, making it a scenic location for visitors to enjoy.</p>
         </div>
         <div class="sandh">
-            <img class="SandHollow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHitPRYWL7TkNXWehmKT-ulCiAAyTHlwwpZPq5rbMZEQ&s=10" alt="Sand Hollow Beach">
+            <img class="SandHollow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsbF771W2fYDK8nWp2yQQufdPi5GJvD-xecrFBymLkBw&s=10" alt="Sand Hollow Beach">
             <p>Sand Hollow Beach is a sandy shoreline located along the Sand Hollow Reservoir in Utah. It is a popular spot for swimming, sunbathing, and picnicking, with facilities such as restrooms, picnic tables, and fire pits available for visitors. The beach offers stunning views of the surrounding red rock formations and is a great place to relax and enjoy the natural beauty of the area.</p>
         </div>
         <div class="sandho">
-            <img class="SandHollow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUYSydKzOgc3kk8loh-KHrbEQB_MHTya4Slft0Zou2FpZmzK_e5LPPaKlY&s=10" alt="Sand Hollow Hiking Trails">
+            <img class="SandHollow2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBPf1m50mQ2wrzu9efj0DRENmZVv5D1eiOBQ1ZMEuHPg&s=10" alt="Sand Hollow Hiking Trails">
             <p>Sand Hollow Hiking Trails are a network of trails located within Sand Hollow State Park in Utah. The trails offer opportunities for hiking, mountain biking, and wildlife viewing, with varying levels of difficulty to accommodate different skill levels. Hikers can explore the park's red rock formations, desert landscapes, and scenic vistas while enjoying the natural beauty of the area. The trails are well-marked and maintained, providing a safe and enjoyable experience for outdoor enthusiasts.</p>
-
         </div>
+    </div>
+    <button onclick="showHideExtra()">Click Me!</button>
+    <div id="extra-content">
+        <p>Thank you for exploring Sand Hollow State Park! Here is a secret bonus image just for you.</p>
+        <img class="SandHollow2" src="https://gstatic.com" alt="Bonus Image">
     </div>
 </body>
 </html>
